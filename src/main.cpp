@@ -59,7 +59,7 @@ std::vector<std::string> leerNombresDesdeArchivo(const std::string& nombreArchiv
 }
 
 int main() {
-
+    srand(time(nullptr));
     bool cajas_ocupada[3] = {false, false, false};
     Queue<Client> c1;
     Queue<Client> cola_espera;
@@ -74,7 +74,7 @@ int main() {
 
     int client_rand, client_waiting_time, no_caja;
     try {
-        for (int i = 0; i < 10; ++i) {             
+        for (int i = 0; i < TIEMPO_TOTAL; ++i) {
             // Generar un número aleatorio entre 1 y 10
             int add_client = rand() % 5 + 1;
 
@@ -85,28 +85,22 @@ int main() {
 
             if (i % add_client == 0) {
                 client_waiting_time = rand() % 10 + 1;
-                cola_espera.push(
-                                 Client(nombres[client_rand], client_waiting_time));
+                cola_espera.push(Client(nombres[client_rand], client_waiting_time));
             }
 
-            switch (no_caja) {
-                case 0:
-
-                    if (!cajas_ocupada[0] && !cola_espera.isEmpty()){
-                        cola_espera.getFront().setStartTime(i);
-                        caja[no_caja] = cola_espera.getFront();
-                        cajas_ocupada[0] = true;
-                        cola_espera.pop();
-                    }
-                    break;
-             }
+            if (!cajas_ocupada[no_caja] && !cola_espera.isEmpty()){
+                cola_espera.getFront().setStartTime(i);
+                caja[no_caja] = cola_espera.getFront();
+                cajas_ocupada[no_caja] = true;
+                cola_espera.pop();
+            }
             clearScreen();
             cout << "\n\nTiempo transcurrido: " << i << "\n\n" << endl;
 
             for (int caja_index = 0; caja_index < 1; ++caja_index) {
                 if (cajas_ocupada[caja_index])
-                    cout << "En Caja 1: \n" << caja[0].name << std::endl;
-                else cout << "En Caja 1: No hay nadie \n" << std::endl;
+                    cout << "En Caja " << caja_index << ": \n" << caja[caja_index].name << " tiempo de atencion: " << caja[caja_index].atention_time << " inicio de atencion: " << caja[caja_index].start_time_atention << std::endl;
+                else cout << "En Caja " << caja_index << ": No hay nadie \n" << std::endl;
             }
 
             cout << "\nEspera: " << std::endl;
@@ -122,6 +116,20 @@ int main() {
                 if (i - client.start_time_atention >= client.atention_time){
                     cajas_ocupada[caja_index] = false;
                     c1.push(client);
+                    
+                    this_thread::sleep_for(chrono::seconds(1));
+                    clearScreen();
+                     cout << "\n\nTiempo transcurrido: " << i << "\n\n" << endl;
+
+                     for (int caja_index = 0; caja_index < 1; ++caja_index) {
+                         if (cajas_ocupada[caja_index])
+                             cout << "En Caja " << caja_index << ": \n" << client.name << " tiempo de atencion: " << client.atention_time << " inicio de atencion: " << client.start_time_atention << std::endl;
+                         else cout << "En Caja " << caja_index << ": No hay nadie \n" << std::endl;
+            }
+
+            cout << "\nEspera: " << std::endl;
+            if (!cola_espera.isEmpty())
+                cola_espera.print();
                     cout << "\n\nTermino atencion a : " << client.name << endl;
                 }
             }

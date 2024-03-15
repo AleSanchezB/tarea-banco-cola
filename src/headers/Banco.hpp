@@ -11,6 +11,7 @@
 
 class Banco {
 private:
+    int cant_cajas;
     struct Client {
     public:
         Client();
@@ -19,11 +20,25 @@ private:
         int start_time_atention;
         std::string name;
         void setStartTime(int);
-        void openBank();
     };
+
+    int add_rand_client;
+    int client_name_rand;
+
+    bool cajas_ocupada[3] = {false, false, false};
+    Queue<Client*>* cajas;
+    Queue<Client*> cola_espera;
+    Client *cajas_banco;
+    bool* cajas_ocupadas;
+    
 public:
-    Banco();
+    Banco(Queue<Client*>*,Queue<Client*>, Client*, bool*);
     ~Banco();
+    void openBank();
+    void print(Client*, int);
+    void printBox();
+    void probarFuncion(void (*func)());
+    void clearScreen();
 friend std::ostream &operator<<(std::ostream &os, const Client &A);
 };
 

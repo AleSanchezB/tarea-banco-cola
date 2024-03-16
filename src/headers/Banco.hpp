@@ -1,5 +1,5 @@
-#ifndef BANCO_HPP
-#define BANCO_HPP
+#ifndef BANK_HPP
+#define BANK_HPP
 
 #include "Queue.hpp"
 #include <iostream>
@@ -9,14 +9,13 @@
 #include <vector>
 #include <fstream>
 
-class Banco {
+class Bank {
 private:
     int cant_cajas;
     struct Client {
     public:
         Client();
-        Client(std::string n, int wt);
-        int atention_time;
+        Client(std::string n);         
         int start_time_atention;
         std::string name;
         void setStartTime(int);
@@ -25,20 +24,21 @@ private:
     int add_rand_client;
     int client_name_rand;
 
-    bool cajas_ocupada[3] = {false, false, false};
-    Queue<Client*>* cajas;
-    Queue<Client*> cola_espera;
-    Client *cajas_banco;
-    bool* cajas_ocupadas;
+    bool* available_modules = new bool[3];
+    Queue<Client*>* attended_clients = new Queue<Client*>[3];
+    Queue<Client> waiting_line;
+    Client *modules = new Client[3];
+    int* modules_attention_time;
     
 public:
-    Banco(Queue<Client*>*,Queue<Client*>, Client*, bool*);
-    ~Banco();
-    void openBank();
+    Bank(Queue<Client*>*,Queue<Client>, Client*, bool*);
+    ~Bank();
+    void assignClientModule(int);
     void print(Client*, int);
     void printBox();
     void probarFuncion(void (*func)());
     void clearScreen();
+    void update(int, std::string);
 friend std::ostream &operator<<(std::ostream &os, const Client &A);
 };
 

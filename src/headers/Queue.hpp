@@ -1,11 +1,11 @@
 /**
- * \file Cola.hpp
- * \brief Implementaci&oacute;n de una Matriz algebraica
- * \author Jes&uacute;s Ernesto Carrasco Ter&aacute;n
+ * \file Queue.hpp
+ * \brief Implementacíon de colas de Banco
+ * \author Carlos Enrique Mancillas Duran
  * \author Braulio Alessandro S&aacute;nchez Berm&uacute;dez
- * \date 19/02/2024
+ * \date 16/03/2024
  */
-
+#include <iostream>
 #ifndef QUEUE_HPP
 #define QUEUE_HPP
 
@@ -85,7 +85,8 @@ public:
 
   /**
    * \brief Obtiene el tamaño actual de la pila, es decir, el n&uacute;mero de
-   * elementos. \return El n&uacute;mero de elementos en la pila.
+   * elementos.
+   * \return El n&uacute;mero de elementos en la pila.
    */
   int size() const;
 

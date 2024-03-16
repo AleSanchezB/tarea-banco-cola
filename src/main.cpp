@@ -1,4 +1,5 @@
 #include "headers/Queue.hpp"
+#include "headers/Banco.hpp"
 #include <iostream>
 #include <chrono>
 #include <thread>
@@ -24,10 +25,10 @@ public:
 
 Client::Client() {}
 
-std::ostream & operator<<(std::ostream &out, const Client* &c)
+std::ostream & operator<<(std::ostream &out, const Client & c)
 {
 
-    out << "Nombre: " << c->name << std::endl;
+    out << "" << c.name << std::endl;
 
     return out;
 }
@@ -62,7 +63,7 @@ int main() {
     srand(time(nullptr));
     bool cajas_ocupada[3] = {false, false, false};
     Queue<Client*> c1;
-    Queue<Client*> cola_espera;
+    Queue<Client> cola_espera;
     Client* caja = new Client[1];
 
     std::string archivo = "src/nombres.txt";
@@ -83,14 +84,14 @@ int main() {
 
             no_caja = 0;
 
-            if (i % add_client != 0) {
+            if (i % add_client == 0 || i % add_client != 0) {
                 client_waiting_time = rand() % 5 + 1;
-                cola_espera.push(new Client(nombres[client_rand], client_waiting_time));
+                cola_espera.push(Client(nombres[client_rand], client_waiting_time));
             }
 
             if (!cajas_ocupada[no_caja] && !cola_espera.isEmpty()){
-                cola_espera.getFront()->setStartTime(i);
-                caja[no_caja] = *cola_espera.getFront();
+                cola_espera.getFront().setStartTime(i);
+                caja[no_caja] = cola_espera.getFront();
                 cajas_ocupada[no_caja] = true;
                 cola_espera.pop();
             }
@@ -150,4 +151,54 @@ int main() {
     } 
     return 0;  
 }
- 
+
+
+
+int main() {
+    srand(time(nullptr));
+    bool* available_modules = new bool[3];
+    Queue<Client*>* attended_clients = new Queue<Client*>[3];
+    Queue<Client> waiting_line;
+    Client *modules = new Client[3];
+
+    Bank bank(attended_clients, waiting_line, modules, available_modules);
+    std::string archivo = "src/nombres.txt";
+    std::vector<std::string> names = leerNombresDesdeArchivo(archivo);
+
+    int TIEMPO_TOTAL = rand() % 240 + 120;
+
+    int client_rand, client_attention_time;
+     try {
+        for (int current_time = 0; current_time < TIEMPO_TOTAL; ++current_time) {
+
+            bank.update(current_time, names[rand() % 100]);
+            for (int i = 0; i < 3; ++i) {
+                bank.assignClientModule(i);
+            }
+
+
+             for (int caja_index = 0; caja_index < 3; ++caja_index) {
+                if (!available_modules[caja_index])
+                    continue;
+                
+                Client client = modules[caja_index];
+                if (current_time - client.start_time_atention >= client.atention_time){
+                    available_modules[caja_index] = false;
+                    attended_clients->push();
+                    
+                    this_thread::sleep_for(chrono::seconds(2));
+                    bank.print(client.name, current_time);
+            if (!waiting_line.isEmpty())
+                waiting_line.print();
+                    cout << "\n\nTermino atencion a : " << client.name << endl;
+                }
+            }
+        }
+        delete[] caja;
+        delete[] cajas;
+        delete[] cajas_ocupadas;
+    } catch (const char* &msg) {
+        std::cout << msg << std::endl;
+    }
+    return 0;
+}

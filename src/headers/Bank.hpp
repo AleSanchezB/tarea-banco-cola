@@ -2,12 +2,6 @@
 #define BANK_HPP
 
 #include "Queue.hpp"
-#include <iostream>
-#include <chrono>
-#include <thread>
-#include <cstdlib>
-#include <vector>
-#include <fstream>
 
 class Bank {
 private:
@@ -24,21 +18,25 @@ private:
     int add_rand_client;
     int client_name_rand;
 
-    bool* available_modules = new bool[3];
-    Queue<Client*>* attended_clients = new Queue<Client*>[3];
+    bool* available_modules;
+    Queue<Client>* attended_clients;
     Queue<Client> waiting_line;
-    Client *modules = new Client[3];
-    int* modules_attention_time;
+    Client *modules;
+    int *modules_attention_time;
+    int TIME_OPEN_BANK;
     
 public:
-    Bank(Queue<Client*>*,Queue<Client>, Client*, bool*);
+    Bank(Queue<Client>*, Queue<Client>, Client *, bool *);
+    Bank(int );
     ~Bank();
-    void assignClientModule(int);
-    void print(Client*, int);
+    void assignClientModule(int, int);
+    void close();
+    void print(Client, int);
     void printBox();
     void probarFuncion(void (*func)());
     void clearScreen();
     void update(int, std::string);
+    void verifyAttentionClient(int,int);
 friend std::ostream &operator<<(std::ostream &os, const Client &A);
 };
 

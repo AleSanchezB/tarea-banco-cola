@@ -1,0 +1,34 @@
+\doxysection{Referencia del archivo src/headers/\+Bank.hpp}
+\hypertarget{Bank_8hpp}{}\label{Bank_8hpp}\index{src/headers/Bank.hpp@{src/headers/Bank.hpp}}
+
+
+Implementacion de la clase Banco.  
+
+
+{\ttfamily \#include "{}Queue.\+hpp"{}}\newline
+Gráfico de dependencias incluidas en Bank.\+hpp\+:
+% FIG 0
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classBank}{Bank}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{Bank_8hpp_a6358f1eb4f567f82e6a0be31e6e069af}\label{Bank_8hpp_a6358f1eb4f567f82e6a0be31e6e069af} 
+typedef std\+::string {\bfseries Client}
+\begin{DoxyCompactList}\small\item\em Define Client como un alias para std\+::string, utilizado para representar los nombres de los clientes en el banco. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Implementacion de la clase Banco. 
+
+\begin{DoxyAuthor}{Autor}
+Braulio Alessandro Sánchez Bermúdez 
+
+Carlos Enrique Mancillas Duran 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Fecha}
+16/03/2024 
+\end{DoxyDate}

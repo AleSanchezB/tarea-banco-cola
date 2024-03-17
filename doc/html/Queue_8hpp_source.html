@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Banco: Archivo de código fuente src/headers/Queue.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Banco<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Es una simulacion de banco utilizando estrucura de datos (colas)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d0381950fc41278198232cb047ffc1f9.html">headers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Queue.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Queue_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef QUEUE_HPP</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define QUEUE_HPP</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classQueue.html">   24</a></span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T = <span class="keywordtype">int</span>&gt; <span class="keyword">class </span><a class="code hl_class" href="classQueue.html">Queue</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classQueue.html#af73bb29c868f7b37f369c668f114bd9f">   29</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classQueue.html#af73bb29c868f7b37f369c668f114bd9f">Queue</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classQueue.html#ae527d3f15307905ca2f1093e7b8a22f9">   35</a></span>  <a class="code hl_function" href="classQueue.html#ae527d3f15307905ca2f1093e7b8a22f9">Queue</a>(<span class="keyword">const</span> <a class="code hl_class" href="classQueue.html">Queue</a> &amp;p);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classQueue.html#a01a29421df76eb7fbb1a6a25df6d65c5">   44</a></span>  <a class="code hl_class" href="classQueue.html">Queue</a> &amp;<a class="code hl_function" href="classQueue.html#a01a29421df76eb7fbb1a6a25df6d65c5">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classQueue.html">Queue</a> &amp;p);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classQueue.html#aa7eef1b427e24555780505de20e9acbc">   49</a></span>  <a class="code hl_function" href="classQueue.html#aa7eef1b427e24555780505de20e9acbc">~Queue</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classQueue.html#acdbaa4c1b7db6f14580f124733e19366">   55</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classQueue.html#acdbaa4c1b7db6f14580f124733e19366">push</a>(T valor);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classQueue.html#a02ea784625fe33b5793d00c3b02b4878">   60</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classQueue.html#a02ea784625fe33b5793d00c3b02b4878">pop</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classQueue.html#aebfeedfc52c5bea4d35fd4338ad19eb6">   69</a></span>  T <a class="code hl_function" href="classQueue.html#aebfeedfc52c5bea4d35fd4338ad19eb6">getFront</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classQueue.html#ac12fca0f24323c8a4959183861b8b259">   78</a></span>  T <a class="code hl_function" href="classQueue.html#ac12fca0f24323c8a4959183861b8b259">getFound</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classQueue.html#acb12e3d108397a77e412d43cdd0b2836">   85</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classQueue.html#acb12e3d108397a77e412d43cdd0b2836">clear</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classQueue.html#a504eb9d0777fb73f99d87a19b7c25c2a">   92</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classQueue.html#a504eb9d0777fb73f99d87a19b7c25c2a">size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classQueue.html#a225f5d08888ea72a4dfe73f235761e5d">   99</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classQueue.html#a225f5d08888ea72a4dfe73f235761e5d">isEmpty</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classQueue.html#a3ebc93d6f3dfdb6e866ce47dcf5560b4">  104</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classQueue.html#a3ebc93d6f3dfdb6e866ce47dcf5560b4">print</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">int</span> _size;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">struct </span>Element {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        Element(T v, Element *next_ = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        T value;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        Element *next;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }* found;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>};</div>
+</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#include &quot;../templates/Queue.tpp&quot;</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="preprocessor">#endif </span><span class="comment">// QUEUE_HPP</span></div>
+<div class="ttc" id="aclassQueue_html"><div class="ttname"><a href="classQueue.html">Queue</a></div><div class="ttdef"><b>Definition</b> Queue.hpp:24</div></div>
+<div class="ttc" id="aclassQueue_html_a01a29421df76eb7fbb1a6a25df6d65c5"><div class="ttname"><a href="classQueue.html#a01a29421df76eb7fbb1a6a25df6d65c5">Queue::operator=</a></div><div class="ttdeci">Queue &amp; operator=(const Queue &amp;p)</div><div class="ttdoc">Sobrecarga del operador de asignación.</div></div>
+<div class="ttc" id="aclassQueue_html_a02ea784625fe33b5793d00c3b02b4878"><div class="ttname"><a href="classQueue.html#a02ea784625fe33b5793d00c3b02b4878">Queue::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdoc">Elimina el elemento al principio de la cola.</div></div>
+<div class="ttc" id="aclassQueue_html_a225f5d08888ea72a4dfe73f235761e5d"><div class="ttname"><a href="classQueue.html#a225f5d08888ea72a4dfe73f235761e5d">Queue::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdoc">Verifica si la cola está vacía.</div></div>
+<div class="ttc" id="aclassQueue_html_a3ebc93d6f3dfdb6e866ce47dcf5560b4"><div class="ttname"><a href="classQueue.html#a3ebc93d6f3dfdb6e866ce47dcf5560b4">Queue::print</a></div><div class="ttdeci">void print() const</div><div class="ttdoc">Imprime todos los elementos de la cola, utilizado para pruebas.</div></div>
+<div class="ttc" id="aclassQueue_html_a504eb9d0777fb73f99d87a19b7c25c2a"><div class="ttname"><a href="classQueue.html#a504eb9d0777fb73f99d87a19b7c25c2a">Queue::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">Obtiene el tamaño actual de la cola, es decir, el número de elementos.</div></div>
+<div class="ttc" id="aclassQueue_html_aa7eef1b427e24555780505de20e9acbc"><div class="ttname"><a href="classQueue.html#aa7eef1b427e24555780505de20e9acbc">Queue::~Queue</a></div><div class="ttdeci">~Queue()</div><div class="ttdoc">Destructor que libera la memoria de la cola.</div></div>
+<div class="ttc" id="aclassQueue_html_ac12fca0f24323c8a4959183861b8b259"><div class="ttname"><a href="classQueue.html#ac12fca0f24323c8a4959183861b8b259">Queue::getFound</a></div><div class="ttdeci">T getFound() const</div><div class="ttdoc">Obtiene el valor del fondo de la cola sin eliminarlo.</div></div>
+<div class="ttc" id="aclassQueue_html_acb12e3d108397a77e412d43cdd0b2836"><div class="ttname"><a href="classQueue.html#acb12e3d108397a77e412d43cdd0b2836">Queue::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Vacía la cola eliminando todos sus elementos.</div></div>
+<div class="ttc" id="aclassQueue_html_acdbaa4c1b7db6f14580f124733e19366"><div class="ttname"><a href="classQueue.html#acdbaa4c1b7db6f14580f124733e19366">Queue::push</a></div><div class="ttdeci">void push(T valor)</div><div class="ttdoc">Agrega un nuevo elemento al fondo de la cola.</div></div>
+<div class="ttc" id="aclassQueue_html_ae527d3f15307905ca2f1093e7b8a22f9"><div class="ttname"><a href="classQueue.html#ae527d3f15307905ca2f1093e7b8a22f9">Queue::Queue</a></div><div class="ttdeci">Queue(const Queue &amp;p)</div><div class="ttdoc">Constructor de copia.</div></div>
+<div class="ttc" id="aclassQueue_html_aebfeedfc52c5bea4d35fd4338ad19eb6"><div class="ttname"><a href="classQueue.html#aebfeedfc52c5bea4d35fd4338ad19eb6">Queue::getFront</a></div><div class="ttdeci">T getFront() const</div><div class="ttdoc">Obtiene el valor del inicio de la cola sin eliminarlo.</div></div>
+<div class="ttc" id="aclassQueue_html_af73bb29c868f7b37f369c668f114bd9f"><div class="ttname"><a href="classQueue.html#af73bb29c868f7b37f369c668f114bd9f">Queue::Queue</a></div><div class="ttdeci">Queue()</div><div class="ttdoc">Constructor por defecto que inicializa una cola vacía.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

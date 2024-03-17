@@ -90,12 +90,12 @@ template <typename T> void Queue<T>::print() const {
         throw "Error: The queue is empty.";
     Element *aux;
     aux = found->next;
-    std::cout << "" << aux->value;
+    std::cout << aux->value << std::endl;
     aux = aux->next;
     while (aux != found->next) {
-        std::cout << aux->value;
+        std::cout << aux->value << std::endl;
         aux = aux->next;
-    } 
+    }
 }
 
 //****************************************************************************

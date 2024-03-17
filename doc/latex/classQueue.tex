@@ -1,0 +1,198 @@
+\doxysection{Referencia de la plantilla de la clase Queue\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{classQueue}{}\label{classQueue}\index{Queue$<$ T $>$@{Queue$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Queue.\+hpp$>$}
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classQueue_af73bb29c868f7b37f369c668f114bd9f}\label{classQueue_af73bb29c868f7b37f369c668f114bd9f} 
+{\bfseries Queue} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto que inicializa una cola vac\'{\i}a. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classQueue_ae527d3f15307905ca2f1093e7b8a22f9}{Queue}} (const \mbox{\hyperlink{classQueue}{Queue}} \&p)
+\begin{DoxyCompactList}\small\item\em Constructor de copia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classQueue}{Queue}} \& \mbox{\hyperlink{classQueue_a01a29421df76eb7fbb1a6a25df6d65c5}{operator=}} (const \mbox{\hyperlink{classQueue}{Queue}} \&p)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador de asignaci\'{o}n. \end{DoxyCompactList}\item 
+\Hypertarget{classQueue_aa7eef1b427e24555780505de20e9acbc}\label{classQueue_aa7eef1b427e24555780505de20e9acbc} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Queue} ()
+\begin{DoxyCompactList}\small\item\em Destructor que libera la memoria de la cola. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQueue_acdbaa4c1b7db6f14580f124733e19366}{push}} (T valor)
+\begin{DoxyCompactList}\small\item\em Agrega un nuevo elemento al fondo de la cola. \end{DoxyCompactList}\item 
+\Hypertarget{classQueue_a02ea784625fe33b5793d00c3b02b4878}\label{classQueue_a02ea784625fe33b5793d00c3b02b4878} 
+void {\bfseries pop} ()
+\begin{DoxyCompactList}\small\item\em Elimina el elemento al principio de la cola. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classQueue_aebfeedfc52c5bea4d35fd4338ad19eb6}{get\+Front}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el valor del inicio de la cola sin eliminarlo. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classQueue_ac12fca0f24323c8a4959183861b8b259}{get\+Found}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el valor del fondo de la cola sin eliminarlo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQueue_acb12e3d108397a77e412d43cdd0b2836}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Vac\'{\i}a la cola eliminando todos sus elementos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classQueue_a504eb9d0777fb73f99d87a19b7c25c2a}{size}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el tamaño actual de la cola, es decir, el n\'{u}mero de elementos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classQueue_a225f5d08888ea72a4dfe73f235761e5d}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Verifica si la cola est\'{a} vac\'{\i}a. \end{DoxyCompactList}\item 
+\Hypertarget{classQueue_a3ebc93d6f3dfdb6e866ce47dcf5560b4}\label{classQueue_a3ebc93d6f3dfdb6e866ce47dcf5560b4} 
+void {\bfseries print} () const
+\begin{DoxyCompactList}\small\item\em Imprime todos los elementos de la cola, utilizado para pruebas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\subsubsection*{template$<$typename T = int$>$\newline
+class Queue$<$ T $>$}
+Esta clase template ofrece una implementaci\'{o}n de cola con operaciones para agregar, eliminar elementos, y consultar el tope de la cola, entre otras.
+
+
+\begin{DoxyTemplParams}{Parámetros de plantilla}
+{\em T} & Tipo de elementos almacenados en la cola. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classQueue_ae527d3f15307905ca2f1093e7b8a22f9}\label{classQueue_ae527d3f15307905ca2f1093e7b8a22f9} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!Queue@{Queue}}
+\index{Queue@{Queue}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Queue()}{Queue()}}
+{\footnotesize\ttfamily template$<$typename T  = int$>$ \\
+\mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\mbox{\hyperlink{classQueue}{\+::\+Queue}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$ \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Constructor de copia. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p} & Otra cola de la cual se copiar\'{a}n los elementos. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classQueue_acb12e3d108397a77e412d43cdd0b2836}\label{classQueue_acb12e3d108397a77e412d43cdd0b2836} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T  = int$>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Vac\'{\i}a la cola eliminando todos sus elementos. 
+
+
+\begin{DoxyExceptions}{Excepciones}
+{\em const} & {\bfseries{char \texorpdfstring{$\ast$}{*}}} La pial está vacía. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classQueue_ac12fca0f24323c8a4959183861b8b259}\label{classQueue_ac12fca0f24323c8a4959183861b8b259} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!getFound@{getFound}}
+\index{getFound@{getFound}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getFound()}{getFound()}}
+{\footnotesize\ttfamily template$<$typename T  = int$>$ \\
+T \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::get\+Found (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el valor del fondo de la cola sin eliminarlo. 
+
+
+\begin{DoxyExceptions}{Excepciones}
+{\em const} & {\bfseries{char \texorpdfstring{$\ast$}{*}}} La cola está vacía.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Devuelve}
+El valor en el tope de la cola. 
+\end{DoxyReturn}
+\Hypertarget{classQueue_aebfeedfc52c5bea4d35fd4338ad19eb6}\label{classQueue_aebfeedfc52c5bea4d35fd4338ad19eb6} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!getFront@{getFront}}
+\index{getFront@{getFront}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getFront()}{getFront()}}
+{\footnotesize\ttfamily template$<$typename T  = int$>$ \\
+T \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::get\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el valor del inicio de la cola sin eliminarlo. 
+
+
+\begin{DoxyExceptions}{Excepciones}
+{\em const} & {\bfseries{char \texorpdfstring{$\ast$}{*}}} La cola está vacía.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Devuelve}
+El valor en el tope de la cola. 
+\end{DoxyReturn}
+\Hypertarget{classQueue_a225f5d08888ea72a4dfe73f235761e5d}\label{classQueue_a225f5d08888ea72a4dfe73f235761e5d} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T  = int$>$ \\
+bool \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Verifica si la cola est\'{a} vac\'{\i}a. 
+
+\begin{DoxyReturn}{Devuelve}
+Verdadero si la cola est\'{a} vac\'{\i}a, falso de lo contrario. 
+\end{DoxyReturn}
+\Hypertarget{classQueue_a01a29421df76eb7fbb1a6a25df6d65c5}\label{classQueue_a01a29421df76eb7fbb1a6a25df6d65c5} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T  = int$>$ \\
+\mbox{\hyperlink{classQueue}{Queue}} \& \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$ \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del operador de asignaci\'{o}n. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p} & Otra cola de la cual se copiar\'{a}n los elementos. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em const} & {\bfseries{char \texorpdfstring{$\ast$}{*}}} La cola copia no puede ser creado.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Devuelve}
+Referencia a la cola actual. 
+\end{DoxyReturn}
+\Hypertarget{classQueue_acdbaa4c1b7db6f14580f124733e19366}\label{classQueue_acdbaa4c1b7db6f14580f124733e19366} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!push@{push}}
+\index{push@{push}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$typename T  = int$>$ \\
+void \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{T}]{valor }\end{DoxyParamCaption})}
+
+
+
+Agrega un nuevo elemento al fondo de la cola. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em valor} & El valor a agregar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classQueue_a504eb9d0777fb73f99d87a19b7c25c2a}\label{classQueue_a504eb9d0777fb73f99d87a19b7c25c2a} 
+\index{Queue$<$ T $>$@{Queue$<$ T $>$}!size@{size}}
+\index{size@{size}!Queue$<$ T $>$@{Queue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T  = int$>$ \\
+int \mbox{\hyperlink{classQueue}{Queue}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el tamaño actual de la cola, es decir, el n\'{u}mero de elementos. 
+
+\begin{DoxyReturn}{Devuelve}
+El n\'{u}mero de elementos en la cola. 
+\end{DoxyReturn}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/\mbox{\hyperlink{Queue_8hpp}{Queue.\+hpp}}\end{DoxyCompactItemize}

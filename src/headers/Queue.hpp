@@ -1,6 +1,6 @@
 /**
  * \file Queue.hpp
- * \brief Implementacíon de colas de Banco
+ * \brief Implementacíon de colas
  * \author Carlos Enrique Mancillas Duran
  * \author Braulio Alessandro S&aacute;nchez Berm&uacute;dez
  * \date 16/03/2024
@@ -9,74 +9,75 @@
 #ifndef QUEUE_HPP
 #define QUEUE_HPP
 
-/**
- * \class Queue
- * \brief Clase genérica de Queue que implementa operaciones b&aacute;sicas de
-pila.
+/** \class Queue
  *
- * Esta clase template ofrece una implementaci&oacute;n de pila con operaciones
+ * Esta clase template ofrece una implementaci&oacute;n de cola con operaciones
 para agregar,
- * eliminar elementos, y consultar el tope de la pila, entre otras.
+ * eliminar elementos, y consultar el tope de la cola, entre otras.
  *
- * \tparam T Tipo de elementos almacenados en la pila.
+ * \tparam T Tipo de elementos almacenados en la cola.
  *
  *
  *
- * \code Ejemplo.cpp
-
-\endverbatim
 *
  */
 template <typename T = int> class Queue {
 public:
   /**
-   * \brief Constructor por defecto que inicializa una pila vac&iacute;a.
+   * \brief Constructor por defecto que inicializa una cola vac&iacute;a.
    */
   explicit Queue();
 
   /**
    * \brief Constructor de copia.
-   * \param p Otra pila de la cual se copiar&aacute;n los elementos.
+   * \param p Otra cola de la cual se copiar&aacute;n los elementos.
    */
   Queue(const Queue &p);
 
   /**
    * \brief Sobrecarga del operador de asignaci&oacute;n.
-   * \param p Otra pila de la cual se copiar&aacute;n los elementos.
-   * \exception const <b>char *</b> La pila copia no puede ser creado.
+   * \param p Otra cola de la cual se copiar&aacute;n los elementos.
+   * \exception const <b>char *</b> La cola copia no puede ser creado.
    *
-   * \return Referencia a la pila actual.
+   * \return Referencia a la cola actual.
    */
   Queue &operator=(const Queue &p);
 
   /**
-   * \brief Destructor que libera la memoria de la pila.
+   * \brief Destructor que libera la memoria de la cola.
    */
   ~Queue();
 
   /**
-   * \brief Agrega un nuevo elemento al tope de la pila.
+   * \brief Agrega un nuevo elemento al fondo de la cola.
    * \param valor El valor a agregar.
    */
   void push(T valor);
 
   /**
-   * \brief Elimina el elemento del tope de la pila.
+   * \brief Elimina el elemento al principio de la cola.
    */
   void pop();
 
   /**
-   * \brief Obtiene el valor del tope de la pila sin eliminarlo.
+   * \brief Obtiene el valor del inicio de la cola sin eliminarlo.
    *
-   * \exception const <b>char *</b> La pila está vacía.
+   * \exception const <b>char *</b> La cola está vacía.
 
-   * \return El valor en el tope de la pila.
+   * \return El valor en el tope de la cola.
    */
   T getFront() const;
 
+  /**
+   * \brief Obtiene el valor del fondo de la cola sin eliminarlo.
+   *
+   * \exception const <b>char *</b> La cola está vacía.
+
+   * \return El valor en el tope de la cola.
+   */
   T getFound() const;
   /**
-   * \brief Vac&iacute;a la pila eliminando todos sus elementos.
+   * \brief Vac&iacute;a la cola eliminando todos sus elementos.
    *
    * \exception const <b>char *</b> La pial está vacía.
 
@@ -84,21 +85,21 @@ public:
   void clear();
 
   /**
-   * \brief Obtiene el tamaño actual de la pila, es decir, el n&uacute;mero de
+   * \brief Obtiene el tamaño actual de la cola, es decir, el n&uacute;mero de
    * elementos.
-   * \return El n&uacute;mero de elementos en la pila.
+   * \return El n&uacute;mero de elementos en la cola.
    */
   int size() const;
 
   /**
-   * \brief Verifica si la pila est&aacute; vac&iacute;a.
-   * \return Verdadero si la pila est&aacute; vac&iacute;a, falso de lo
+   * \brief Verifica si la cola est&aacute; vac&iacute;a.
+   * \return Verdadero si la cola est&aacute; vac&iacute;a, falso de lo
    * contrario.
    */
   bool isEmpty() const;
 
   /**
-   * \brief Imprime todos los elementos de la pila, utilizado para pruebas.
+   * \brief Imprime todos los elementos de la cola, utilizado para pruebas.
    */
   void print() const;
 

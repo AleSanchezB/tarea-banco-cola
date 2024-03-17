@@ -1,0 +1,49 @@
+\doxysection{Queue.\+hpp}
+\hypertarget{Queue_8hpp_source}{}\label{Queue_8hpp_source}\index{src/headers/Queue.hpp@{src/headers/Queue.hpp}}
+\mbox{\hyperlink{Queue_8hpp}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ QUEUE\_HPP}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ QUEUE\_HPP}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T\ =\ \textcolor{keywordtype}{int}>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classQueue}{Queue}}\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classQueue_af73bb29c868f7b37f369c668f114bd9f}{Queue}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \mbox{\hyperlink{classQueue_ae527d3f15307905ca2f1093e7b8a22f9}{Queue}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQueue}{Queue}}\ \&p);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00044\ \ \ \mbox{\hyperlink{classQueue}{Queue}}\ \&\mbox{\hyperlink{classQueue_a01a29421df76eb7fbb1a6a25df6d65c5}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classQueue}{Queue}}\ \&p);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \mbox{\hyperlink{classQueue_aa7eef1b427e24555780505de20e9acbc}{\string~Queue}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_acdbaa4c1b7db6f14580f124733e19366}{push}}(T\ valor);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a02ea784625fe33b5793d00c3b02b4878}{pop}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00069\ \ \ T\ \mbox{\hyperlink{classQueue_aebfeedfc52c5bea4d35fd4338ad19eb6}{getFront}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00078\ \ \ T\ \mbox{\hyperlink{classQueue_ac12fca0f24323c8a4959183861b8b259}{getFound}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00085\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_acb12e3d108397a77e412d43cdd0b2836}{clear}}();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classQueue_a504eb9d0777fb73f99d87a19b7c25c2a}{size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classQueue_a225f5d08888ea72a4dfe73f235761e5d}{isEmpty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00104\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classQueue_a3ebc93d6f3dfdb6e866ce47dcf5560b4}{print}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{int}\ \_size;}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keyword}{struct\ }Element\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ Element(T\ v,\ Element\ *next\_\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ T\ value;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ Element\ *next;}
+\DoxyCodeLine{00113\ \ \ \ \ \}*\ found;}
+\DoxyCodeLine{00114\ \};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{preprocessor}{\#include\ "{}../templates/Queue.tpp"{}}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ QUEUE\_HPP}}
+
+\end{DoxyCode}

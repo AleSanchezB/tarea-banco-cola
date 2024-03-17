@@ -1,0 +1,52 @@
+\doxysection{Bank.\+hpp}
+\hypertarget{Bank_8hpp_source}{}\label{Bank_8hpp_source}\index{src/headers/Bank.hpp@{src/headers/Bank.hpp}}
+\mbox{\hyperlink{Bank_8hpp}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ BANK\_HPP}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ BANK\_HPP}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Queue_8hpp}{Queue.hpp}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ std::string\ \mbox{\hyperlink{Bank_8hpp_a6358f1eb4f567f82e6a0be31e6e069af}{Client}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBank}{Bank}}\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ cant\_cajas;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{struct\ }Module\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ Module();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ start\_time\_attention;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ attention\_time;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Bank_8hpp_a6358f1eb4f567f82e6a0be31e6e069af}{Client}}\ client;}
+\DoxyCodeLine{00032\ \ \ \ \ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ add\_rand\_client;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ client\_name\_rand;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}*\ available\_modules;}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classQueue}{Queue<Client>}}*\ attended\_clients;}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classQueue}{Queue<Client>}}\ waiting\_line;}
+\DoxyCodeLine{00040\ \ \ \ \ Module\ *modules;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ TIME\_OPEN\_BANK;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ printBox(\textcolor{keywordtype}{int}\ module\_index);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ print(\textcolor{keywordtype}{int}\ current\_time);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ clearScreen();}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{classBank_a287b295e559818b4c9563706b18dd5d7}{Bank}}(\textcolor{keywordtype}{int}\ time\_open\_bank);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{classBank_a86eb33b90cf9dbf0a528155c5bfde004}{\string~Bank}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBank_afed3bfdf7c2faf01ef85d4b1e794b4a0}{assignClientModule}}(\textcolor{keywordtype}{int}\ module\_index,\ \textcolor{keywordtype}{int}\ current\_time);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBank_aef46fa68a6298c17c58d33f8a42231f3}{close}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBank_a7d9b71a9d31f0278c62801b0c45ae8a8}{update}}(\textcolor{keywordtype}{int}\ current\_time,\ \mbox{\hyperlink{Bank_8hpp_a6358f1eb4f567f82e6a0be31e6e069af}{Client}}\ client);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBank_ab487b82053d37899da896b0de2f8553b}{verifyAttentionClient}}(\textcolor{keywordtype}{int}\ current\_time,\ \textcolor{keywordtype}{int}\ module\_attention);}
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

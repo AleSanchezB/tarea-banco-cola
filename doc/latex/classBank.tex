@@ -1,0 +1,96 @@
+\doxysection{Referencia de la clase Bank}
+\hypertarget{classBank}{}\label{classBank}\index{Bank@{Bank}}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBank_a287b295e559818b4c9563706b18dd5d7}{Bank}} (int time\+\_\+open\+\_\+bank)
+\begin{DoxyCompactList}\small\item\em Constructor por defecto que inicializa un objeto de clase \doxylink{classBank}{Bank}. \end{DoxyCompactList}\item 
+\Hypertarget{classBank_a86eb33b90cf9dbf0a528155c5bfde004}\label{classBank_a86eb33b90cf9dbf0a528155c5bfde004} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Bank} ()
+\begin{DoxyCompactList}\small\item\em Destructor que libera la memoria del objeto \doxylink{classBank}{Bank}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBank_afed3bfdf7c2faf01ef85d4b1e794b4a0}{assign\+Client\+Module}} (int module\+\_\+index, int current\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Assigna cliente a modulo disponible. \end{DoxyCompactList}\item 
+\Hypertarget{classBank_aef46fa68a6298c17c58d33f8a42231f3}\label{classBank_aef46fa68a6298c17c58d33f8a42231f3} 
+void {\bfseries close} ()
+\begin{DoxyCompactList}\small\item\em Imprime los clientes que fueron atendidos en cada queja y los que quedaron en la lista de espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBank_a7d9b71a9d31f0278c62801b0c45ae8a8}{update}} (int current\+\_\+time, \mbox{\hyperlink{Bank_8hpp_a6358f1eb4f567f82e6a0be31e6e069af}{Client}} client)
+\begin{DoxyCompactList}\small\item\em Metodo que agrega a la lista de espera el nombre del cliente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBank_ab487b82053d37899da896b0de2f8553b}{verify\+Attention\+Client}} (int current\+\_\+time, int module\+\_\+attention)
+\begin{DoxyCompactList}\small\item\em Verifica si la caja o mdulo esta disponible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classBank_a287b295e559818b4c9563706b18dd5d7}\label{classBank_a287b295e559818b4c9563706b18dd5d7} 
+\index{Bank@{Bank}!Bank@{Bank}}
+\index{Bank@{Bank}!Bank@{Bank}}
+\doxysubsubsection{\texorpdfstring{Bank()}{Bank()}}
+{\footnotesize\ttfamily Bank\+::\+Bank (\begin{DoxyParamCaption}\item[{int}]{time\+\_\+open\+\_\+bank }\end{DoxyParamCaption})}
+
+
+
+Constructor por defecto que inicializa un objeto de clase \doxylink{classBank}{Bank}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em int} & El tiempo en el que esta abierto el banco. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classBank_afed3bfdf7c2faf01ef85d4b1e794b4a0}\label{classBank_afed3bfdf7c2faf01ef85d4b1e794b4a0} 
+\index{Bank@{Bank}!assignClientModule@{assignClientModule}}
+\index{assignClientModule@{assignClientModule}!Bank@{Bank}}
+\doxysubsubsection{\texorpdfstring{assignClientModule()}{assignClientModule()}}
+{\footnotesize\ttfamily void Bank\+::assign\+Client\+Module (\begin{DoxyParamCaption}\item[{int}]{module\+\_\+index,  }\item[{int}]{current\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Assigna cliente a modulo disponible. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em module\+\_\+index} & Checa que modulo (0,1,2) esta disponible \\
+\hline
+{\em current\+\_\+time} & Asigna el tiempo en el que empezo la atención al cliente \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBank_a7d9b71a9d31f0278c62801b0c45ae8a8}\label{classBank_a7d9b71a9d31f0278c62801b0c45ae8a8} 
+\index{Bank@{Bank}!update@{update}}
+\index{update@{update}!Bank@{Bank}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Bank\+::update (\begin{DoxyParamCaption}\item[{int}]{current\+\_\+time,  }\item[{\mbox{\hyperlink{Bank_8hpp_a6358f1eb4f567f82e6a0be31e6e069af}{Client}}}]{client }\end{DoxyParamCaption})}
+
+
+
+Metodo que agrega a la lista de espera el nombre del cliente. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em current\+\_\+time} & Tiempo actual en la que la persona llega al banco. \\
+\hline
+{\em client} & Cliente (nombre de la persona). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classBank_ab487b82053d37899da896b0de2f8553b}\label{classBank_ab487b82053d37899da896b0de2f8553b} 
+\index{Bank@{Bank}!verifyAttentionClient@{verifyAttentionClient}}
+\index{verifyAttentionClient@{verifyAttentionClient}!Bank@{Bank}}
+\doxysubsubsection{\texorpdfstring{verifyAttentionClient()}{verifyAttentionClient()}}
+{\footnotesize\ttfamily void Bank\+::verify\+Attention\+Client (\begin{DoxyParamCaption}\item[{int}]{current\+\_\+time,  }\item[{int}]{module\+\_\+attention }\end{DoxyParamCaption})}
+
+
+
+Verifica si la caja o mdulo esta disponible. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em int} & Tiempo transcurrido. \\
+\hline
+{\em int} & Número de caja. \\
+\hline
+\end{DoxyParams}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+src/headers/\mbox{\hyperlink{Bank_8hpp}{Bank.\+hpp}}\end{DoxyCompactItemize}

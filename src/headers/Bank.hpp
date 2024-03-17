@@ -33,12 +33,13 @@ private:
 
     int add_rand_client;
     int client_name_rand;
+    int TIME_OPEN_BANK;
 
-    bool* available_modules;
+    bool *available_modules;
+    
     Queue<Client>* attended_clients;
     Queue<Client> waiting_line;
     Module *modules;
-    int TIME_OPEN_BANK;
 
     void printBox(int module_index);
     void print(int current_time);
